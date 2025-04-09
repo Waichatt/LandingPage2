@@ -289,8 +289,8 @@ const translations: Translations = {
     en: "Carlos Rodriguez",
   },
   "testimonials.2.role": {
-    es: "Gerente de Marketing",
-    en: "Marketing Manager",
+    es: "Importador de China",
+    en: "Importer from China",
   },
   "testimonials.3.text": {
     es: "Recomiendo WaiChatt a cualquier negocio que quiera mejorar el servicio al cliente y aumentar ventas sin incrementar costos.",

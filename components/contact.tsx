@@ -153,7 +153,7 @@ export default function Contact() {
                 </a>
                 <a
 
-                  href="#"
+                  href="https://www.linkedin.com/company/waichatt/about"
                   className="w-12 h-12 bg-[#0A66C2] text-white rounded-full flex items-center justify-center hover:opacity-90 transition-all cursor-not-allowed "
                   aria-label="LinkedIn"
                 >

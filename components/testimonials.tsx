@@ -19,7 +19,7 @@ export default function Testimonials() {
       text: t("testimonials.2.text"),
       name: t("testimonials.2.name"),
       role: t("testimonials.2.role"),
-      avatar: "/testimonio2.jpg?height=80&width=80",
+      avatar: "/testimonio4.jpeg?height=80&width=80",
     },
     {
       text: t("testimonials.3.text"),

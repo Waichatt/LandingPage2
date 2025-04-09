@@ -33,7 +33,7 @@ export async function POST(req: Request) {
   try {
     const info = await transporter.sendMail({
       from: `"Formulario Web" <${process.env.GMAIL_USER}>`,
-      to: process.env.GMAIL_USER,
+      to: "info@waichatt.com",
       subject: 'Nuevo mensaje de contacto',
       html: htmlContent,
     })

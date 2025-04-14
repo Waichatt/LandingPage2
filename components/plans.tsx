@@ -122,17 +122,15 @@ export default function Plans() {
         <div className="inline-flex rounded-md shadow-sm p-1 bg-gray-100">
           <button
             onClick={() => setIsAnnual(false)}
-            className={`px-6 py-2 text-sm font-medium rounded-md transition-all ${
-              !isAnnual ? "bg-white text-[#268656] shadow-sm" : "text-gray-600 hover:text-gray-800"
-            }`}
+            className={`px-6 py-2 text-sm font-medium rounded-md transition-all ${!isAnnual ? "bg-white text-[#268656] shadow-sm" : "text-gray-600 hover:text-gray-800"
+              }`}
           >
             {t("plans.mensual")}
           </button>
           <button
             onClick={() => setIsAnnual(true)}
-            className={`px-6 py-2 text-sm font-medium rounded-md transition-all ${
-              isAnnual ? "bg-white text-[#268656] shadow-sm" : "text-gray-600 hover:text-gray-800"
-            }`}
+            className={`px-6 py-2 text-sm font-medium rounded-md transition-all ${isAnnual ? "bg-white text-[#268656] shadow-sm" : "text-gray-600 hover:text-gray-800"
+              }`}
           >
             {t("plans.anual")} {isAnnual && "(15% OFF)"}
           </button>
@@ -143,9 +141,8 @@ export default function Plans() {
         {plans.map((plan, index) => (
           <div
             key={index}
-            className={`card relative ${
-              plan.popular ? "border-2 border-[#268656] transform scale-105 shadow-2xl" : ""
-            }`}
+            className={`card relative ${plan.popular ? "border-2 border-[#268656] transform scale-105 shadow-2xl" : ""
+              }`}
           >
             {plan.popular && (
               <div className="absolute -top-4 right-4 bg-[#268656] text-white px-4 py-1 rounded-full text-sm font-bold">
@@ -169,15 +166,17 @@ export default function Plans() {
                 </li>
               ))}
             </ul>
-            <button
-              className={`w-full py-2 px-4 rounded-lg font-medium transition-all ${
-                plan.popular
-                  ? "bg-[#268656] text-white hover:bg-[#1f6b4a]"
-                  : "bg-gray-100 text-gray-800 hover:bg-gray-200"
-              }`}
-            >
-              {plan.cta}
-            </button>
+            <a href="https://api.whatsapp.com/send?phone=5493813488076&text=Hola!! Estoy interesado en sus servicios" target="_blank">
+
+              <button
+                className={`w-full py-2 px-4 rounded-lg font-medium transition-all ${plan.popular
+                    ? "bg-[#268656] text-white hover:bg-[#1f6b4a]"
+                    : "bg-gray-100 text-gray-800 hover:bg-gray-200"
+                  }`}
+              >
+                {plan.cta}
+              </button>
+            </a>
           </div>
         ))}
       </div>

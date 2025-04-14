@@ -31,7 +31,7 @@ export default function Hero() {
             <div className="relative bg-white rounded-2xl shadow-2xl p-6 z-10">
               <div className="flex items-start space-x-4 mb-6">
                 <div className="w-12 h-12 bg-[#268656] rounded-full flex items-center justify-center text-white font-bold">
-                  <Image src="waichattLogo.png" width={75} height={75} alt="logo waichatt" />
+                  <Image src="/waichatMuneco2.png" width={50} height={50} alt="logo waichatt" />
                 </div>
                 <div className="flex-1">
                   <div className="bg-[#f0f0f0] rounded-lg p-3 mb-2">

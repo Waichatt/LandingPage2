@@ -3,7 +3,7 @@
 import type React from "react"
 
 import { useLanguage } from "./language-provider"
-import { Send, Facebook, Instagram, Linkedin,Check,X } from "lucide-react"
+import { Send, Facebook, Instagram, Linkedin, Check, X } from "lucide-react"
 import { useState } from "react"
 import Image from "next/image"
 
@@ -38,8 +38,8 @@ export default function Contact() {
       })
       if (res.status === 200) {
         setSubmitSuccess(true)
-        setFormData({ name: "", email: "", message: "" })    
-      }else{
+        setFormData({ name: "", email: "", message: "" })
+      } else {
         setError(true);
       }
     } catch (error) {
@@ -116,12 +116,12 @@ export default function Contact() {
             </button>
             {submitSuccess && (
               <div className="mt-4 p-3 bg-green-100 text-green-800 rounded-[10px] flex gap-2 justify-start items-center">
-                <Check className="h-8 w-8 rounded-full p-1  bg-green-500"/> Mensaje enviado con éxito. Nos pondremos en contacto pronto.
+                <Check className="h-8 w-8 rounded-full p-1  bg-green-500" /> Mensaje enviado con éxito. Nos pondremos en contacto pronto.
               </div>
             )}
             {error && (
               <div className="mt-4 p-3 bg-red-100 text-red-800 rounded-[10px] flex gap-2 justify-start items-center">
-                <X className="h-8 w-8 rounded-full p-1  bg-red-500"/> Hubo un error al enviar el mensaje. ¡Intentelo Nuevamente!
+                <X className="h-8 w-8 rounded-full p-1  bg-red-500" /> Hubo un error al enviar el mensaje. ¡Intentelo Nuevamente!
               </div>
             )}
           </form>
@@ -130,10 +130,12 @@ export default function Contact() {
           <div className="card h-full flex flex-col justify-between">
             <div>
               <h3 className="text-xl font-bold mb-6 gradient-text">{t("contact.whatsapp")}</h3>
-              <button className="bg-[#25D366] text-white py-3 px-8 rounded-[10px] flex items-center mb-8 gap-3 hover:bg-opacity-90 transition-all">
-                <Image src="whatsapp.svg" width={20} height={20} alt="logo whatsapp" />
-                WhatsApp
-              </button>
+              <a href="https://wa.me/+5493813488076" target="_blank" rel="noopener noreferrer">
+                <button className="bg-[#25D366] text-white py-3 px-8 rounded-[10px] flex items-center mb-8 gap-3 hover:bg-opacity-90 transition-all">
+                  <Image src="whatsapp.svg" width={20} height={20} alt="logo whatsapp" />
+                  WhatsApp
+                </button>
+              </a>
 
               <h3 className="text-xl font-bold mb-4 gradient-text">{t("contact.social")}</h3>
               <div className="flex space-x-4 mb-8">
@@ -141,6 +143,7 @@ export default function Contact() {
                   href="https://www.facebook.com/share/1HQFRz6wav/?mibextid=wwXIfr"
                   className="w-12 h-12 bg-[#1877F2] text-white rounded-full flex items-center justify-center hover:opacity-90 transition-all"
                   aria-label="Facebook"
+                  target="_blank"
                 >
                   <Facebook size={24} />
                 </a>
@@ -148,14 +151,16 @@ export default function Contact() {
                   href="https://www.instagram.com/waichatt?igsh=bzY0ZHFlb29mY2Uz&utm_source=qr"
                   className="w-12 h-12 bg-[#E4405F] text-white rounded-full flex items-center justify-center hover:opacity-90 transition-all"
                   aria-label="Instagram"
+                  target="_blank"
                 >
                   <Instagram size={24} />
                 </a>
                 <a
 
                   href="https://www.linkedin.com/company/waichatt/about"
-                  className="w-12 h-12 bg-[#0A66C2] text-white rounded-full flex items-center justify-center hover:opacity-90 transition-all cursor-not-allowed "
+                  className="w-12 h-12 bg-[#0A66C2] text-white rounded-full flex items-center justify-center hover:opacity-90 transition-all"
                   aria-label="LinkedIn"
+                  target="_blank"
                 >
                   <Linkedin size={24} />
                 </a>

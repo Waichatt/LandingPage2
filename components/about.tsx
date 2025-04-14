@@ -1,6 +1,7 @@
 "use client"
 
 import { useLanguage } from "./language-provider"
+import Image from "next/image"
 
 export default function About() {
   const { t } = useLanguage()
@@ -17,7 +18,7 @@ export default function About() {
             <div className="h-[300px] sm:h-[400px] bg-gradient-to-br from-[#1f6b4a] to-[#5dae85] flex items-center justify-center">
               <div className="text-white text-center p-8">
                 <div className="w-20 h-20 mx-auto mb-6 bg-white/20 rounded-full flex items-center justify-center">
-                  <span className="text-3xl">🤖</span>
+                  <Image src="/waichatMuneco2.png" width={60} height={60} alt="Imagen wiachat"/>
                 </div>
                 <h3 className="text-2xl font-bold mb-4">WaiChatt AI</h3>
                 <p className="max-w-md">

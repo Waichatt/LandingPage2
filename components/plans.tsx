@@ -166,7 +166,7 @@ export default function Plans() {
                 </li>
               ))}
             </ul>
-            <a href="https://api.whatsapp.com/send?phone=5493813488076&text=Hola!! Estoy interesado en sus servicios" target="_blank">
+            <a href="https://api.whatsapp.com/send?phone=5493815303623&text=Hola!! Estoy interesado en sus servicios" target="_blank">
 
               <button
                 className={`w-full py-2 px-4 rounded-lg font-medium transition-all ${plan.popular

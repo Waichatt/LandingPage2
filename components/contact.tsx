@@ -130,7 +130,7 @@ export default function Contact() {
           <div className="card h-full flex flex-col justify-between">
             <div>
               <h3 className="text-xl font-bold mb-6 gradient-text">{t("contact.whatsapp")}</h3>
-              <a href="https://wa.me/+5493815303623" target="_blank" rel="noopener noreferrer">
+              <a href="https://wa.me/+5493816814079" target="_blank" rel="noopener noreferrer">
                 <button className="bg-[#25D366] text-white py-3 px-8 rounded-[10px] flex items-center mb-8 gap-3 hover:bg-opacity-90 transition-all">
                   <Image src="whatsapp.svg" width={20} height={20} alt="logo whatsapp" />
                   WhatsApp

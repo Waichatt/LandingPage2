@@ -87,10 +87,10 @@ export default function Plans() {
       popular: false,
       features: [
         t("plans.business.messages"),
-        t("plans.business.response"),
-        t("plans.business.products"),
         t("plans.business.support"),
         t("plans.business.analytics"),
+        t("plans.business.response"),
+        t("plans.business.products"),    
       ],
       cta: t("plans.business.cta"),
     },
@@ -101,12 +101,10 @@ export default function Plans() {
       popular: false,
       features: [
         t("plans.custom.messages"),
-        t("plans.custom.products"),
-        t("plans.custom.support"),
         t("plans.custom.integration"),
-        t("plans.custom.crm"),
-        t("plans.custom.file"),
         t("plans.custom.training"),
+        t("plans.custom.support"),
+        t("plans.custom.products"),
       ],
       cta: t("plans.custom.cta"),
     },
@@ -166,7 +164,7 @@ export default function Plans() {
                 </li>
               ))}
             </ul>
-            <a href="https://api.whatsapp.com/send?phone=5493815303623&text=Hola!! Estoy interesado en sus servicios" target="_blank">
+            <a href={`https://api.whatsapp.com/send?phone=5493816814079&text=Hola!! Estoy interesado en su plan ${plan.title}`} target="_blank">
 
               <button
                 className={`w-full py-2 px-4 rounded-lg font-medium transition-all ${plan.popular

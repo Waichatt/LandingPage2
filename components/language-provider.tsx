@@ -130,20 +130,20 @@ const translations: Translations = {
     en: "500 messages",
   },
   "plans.basic.autoresponses": {
-    es: "Respuestas automáticas",
-    en: "Automatic responses",
+    es: "Atención 24/7",
+    en: "24/7 Attention",
   },
   "plans.basic.support": {
-    es: "Soporte por email",
-    en: "Email support",
+    es: "Agenda Citas / Turnos",
+    en: "Schedule Appointments",
   },
   "plans.basic.products": {
-    es: "❌Sin venta de productos",
-    en: "❌No product sales",
+    es: "Venta de productos",
+    en: "Product sales",
   },
   "plans.basic.crm": {
-    es: "CRM basico",
-    en: "CRM basic",
+    es: "CRM Integrado",
+    en: "CRM Integrated",
   },
   "plans.basic.cta": {
     es: "Elegir plan",
@@ -166,16 +166,16 @@ const translations: Translations = {
     en: "2500 messages",
   },
   "plans.pro.products": {
-    es: "❌Sin venta de productos",
-    en: "❌No product sales",
+    es: "Venta de productos",
+    en: "Product sales",
   },
   "plans.pro.support": {
-    es: "Soporte prioritario",
-    en: "Priority support",
+    es: "Agenda Citas / Turnos",
+    en: "Schedule Appointments",
   },
   "plans.pro.response": {
-    es: "Respuestas Automáticas",
-    en: "Automatic responses",
+    es: "Atención 24/7",
+    en: "24/7 Attention",
   },
   "plans.pro.crm": {
     es: "CRM Integrado",
@@ -202,20 +202,20 @@ const translations: Translations = {
     en: "Product sales",
   },
   "plans.business.support": {
-    es: "Soporte 24/7",
-    en: "24/7 support",
+    es: "Atención 24/7",
+    en: "24/7 Attention",
   },
   "plans.business.analytics": {
-    es: "Análisis avanzado",
-    en: "Advanced analytics",
+    es: "Agenda Citas / Turnos",
+    en: "Schedule Appointments",
   },
   "plans.business.response": {
-    es: "Respuestas Automáticas",
-    en: "Automatic responses",
+    es: "CRM Integrado",
+    en: "Integrated CRM",
   },
   "plans.bussiness.crm": {
-    es: "Analisis avanzado",
-    en: "Advanced analytics",
+    es: "Venta de productos",
+    en: "Product sales",
   },
   "plans.business.cta": {
     es: "Elegir plan",
@@ -238,20 +238,16 @@ const translations: Translations = {
     en: "Product sales",
   },
   "plans.custom.support": {
-    es: "Soporte dedicado",
-    en: "Dedicated support",
+    es: "CRM Integrado",
+    en: "Integrated CRM",
   },
   "plans.custom.integration": {
-    es: "Integración personalizada",
-    en: "Custom integration",
+    es: "Atención 24/7",
+    en: "24/7 Attention",
   },
   "plans.custom.training": {
-    es: "Entrenamiento a medida",
-    en: "Custom training",
-  },
-  "plans.custom.file": {
-    es: "Carga de archivos",
-    en: "File upload",
+    es: "Agendas Citas / Turnos",
+    en: "Schedule Appointments",
   },
   "plans.custom.crm": {
     es: "Analisis avanzado",

@@ -20,8 +20,8 @@ const translations: Translations = {
     en: "Home",
   },
   "nav.about": {
-    es: "¿Qué es WaiChatt?",
-    en: "What is WaiChatt?",
+    es: "¿Qué es Waichatt?",
+    en: "What is Waichatt?",
   },
   "nav.plans": {
     es: "Planes",
@@ -42,8 +42,8 @@ const translations: Translations = {
     en: "Tired of losing customers due to slow responses?",
   },
   "hero.subtitle": {
-    es: "Revoluciona tu comunicación con WaiChatt",
-    en: "Revolutionize your communication with WaiChatt",
+    es: "Revoluciona tu comunicación con Waichatt",
+    en: "Revolutionize your communication with Waichatt",
   },
   "hero.description": {
     es: "Agentes de IA integrados con WhatsApp",
@@ -56,12 +56,12 @@ const translations: Translations = {
 
   // About
   "about.title": {
-    es: "¿Qué es WaiChatt?",
-    en: "What is WaiChatt?",
+    es: "¿Qué es Waichatt?",
+    en: "What is Waichatt?",
   },
   "about.description": {
-    es: "WaiChatt es la solución de automatización que integra inteligencia artificial en tu WhatsApp Business para vender y agendar turnos sin intervención manual. Elimina la frustración de respuestas tardías y la pérdida de oportunidades; tu negocio trabaja 24/7, atendiendo cada consulta y potenciando tus ventas.",
-    en: "WaiChatt is the automation solution that integrates artificial intelligence into your WhatsApp Business to sell and schedule appointments without manual intervention. Eliminate the frustration of late responses and lost opportunities; your business works 24/7, attending to every inquiry and boosting your sales.",
+    es: "Waichatt es la solución de automatización que integra inteligencia artificial en tu WhatsApp Business para vender y agendar turnos sin intervención manual. Elimina la frustración de respuestas tardías y la pérdida de oportunidades; tu negocio trabaja 24/7, atendiendo cada consulta y potenciando tus ventas.",
+    en: "Waichatt is the automation solution that integrates artificial intelligence into your WhatsApp Business to sell and schedule appointments without manual intervention. Eliminate the frustration of late responses and lost opportunities; your business works 24/7, attending to every inquiry and boosting your sales.",
   },
 
   // Benefits
@@ -265,8 +265,8 @@ const translations: Translations = {
     en: "Testimonials",
   },
   "testimonials.1.text": {
-    es: "WaiChatt ha transformado mi negocio. Ahora la atención a mis clientes es 24/7 y las ventas aumentaron un 40%.",
-    en: "WaiChatt has transformed my business. Now I serve my customers 24/7 and sales increased by 40%.",
+    es: "Waichatt ha transformado mi negocio. Ahora la atención a mis clientes es 24/7 y las ventas aumentaron un 40%.",
+    en: "Waichatt has transformed my business. Now I serve my customers 24/7 and sales increased by 40%.",
   },
   "testimonials.1.name": {
     es: "María García",
@@ -277,8 +277,8 @@ const translations: Translations = {
     en: "Online Store Owner",
   },
   "testimonials.2.text": {
-    es: "La capacidad de respuesta de WaiChatt es impresionante. Mis clientes reciben atención rápida y precisa.",
-    en: "WaiChatt's responsiveness is impressive. My customers receive quick and accurate attention.",
+    es: "La capacidad de respuesta de Waichatt es impresionante. Mis clientes reciben atención rápida y precisa.",
+    en: "Waichatt's responsiveness is impressive. My customers receive quick and accurate attention.",
   },
   "testimonials.2.name": {
     es: "Carlos Rodríguez",
@@ -289,8 +289,8 @@ const translations: Translations = {
     en: "Importer from China",
   },
   "testimonials.3.text": {
-    es: "Recomiendo WaiChatt a cualquier negocio que quiera mejorar el servicio al cliente y aumentar ventas sin incrementar costos.",
-    en: "I recommend WaiChatt to any business that wants to improve customer service and increase sales without increasing costs.",
+    es: "Recomiendo Waichatt a cualquier negocio que quiera mejorar el servicio al cliente y aumentar ventas sin incrementar costos.",
+    en: "I recommend Waichatt to any business that wants to improve customer service and increase sales without increasing costs.",
   },
   "testimonials.3.name": {
     es: "Laura Martínez",
@@ -333,8 +333,8 @@ const translations: Translations = {
 
   // Footer
   "footer.copyright": {
-    es: "© 2025 WaiChatt",
-    en: "© 2025 WaiChatt",
+    es: "© 2025 Waichatt",
+    en: "© 2025 Waichatt",
   },
 
 }

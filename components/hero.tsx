@@ -29,29 +29,29 @@ export default function Hero() {
             <div className="absolute -top-10 -left-10 w-32 h-32 bg-[#5dae85]/10 rounded-full"></div>
             <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-[#1f6b4a]/10 rounded-full"></div>
             <div className="relative bg-white rounded-2xl shadow-2xl p-6 z-10">
+
               <div className="flex items-start space-x-4 mb-6">
-                <div className="w-12 h-12 bg-[#268656] rounded-full flex items-center justify-center text-white font-bold">
-                  <Image src="/waichatMuneco2.png" width={50} height={50} alt="logo waichatt" />
-                </div>
-                <div className="flex-1">
-                  <div className="bg-[#f0f0f0] rounded-lg p-3 mb-2">
-                    <p className="text-sm">¡Hola! Soy el asistente virtual de WaiChatt. ¿En qué puedo ayudarte hoy?</p>
-                  </div>
-                  <div className="bg-[#e8f5e9] rounded-lg p-3 mb-2">
-                    <p className="text-sm">
-                      Puedo responder preguntas sobre nuestros productos, agendar una demostración o ayudarte con el
-                      proceso de compra.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="flex items-start space-x-4">
                 <div className="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center text-gray-500">
                   U
                 </div>
                 <div className="flex-1">
                   <div className="bg-[#f0f0f0] rounded-lg p-3">
-                    <p className="text-sm">Me gustaría saber más sobre los planes disponibles</p>
+                    <p className="text-sm">¡Hola! Me gustaría saber cúal es su solución</p>
+                  </div>
+                </div>
+              </div>
+              <div className="flex items-start space-x-4 ">
+                <div className="w-12 h-12 bg-[#268656] rounded-full flex items-center justify-center text-white font-bold">
+                  <Image src="/waichatMuneco2.png" width={50} height={50} alt="logo Waichatt" />
+                </div>
+                <div className="flex-1">
+                  <div className="bg-[#e8f5e9] rounded-lg p-3 mb-2">
+                    <p className="text-sm">¡Hola! Soy el asistente virtual de Waichatt</p>
+                  </div>
+                  <div className="bg-[#e8f5e9] rounded-lg p-3 mb-2">
+                    <p className="text-sm">
+                      Puedo responder preguntas frecuentes, agendar turnos, vender tus productos y otras automatizaciones.
+                    </p>
                   </div>
                 </div>
               </div>

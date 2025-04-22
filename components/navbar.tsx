@@ -36,7 +36,7 @@ export default function Navbar() {
             <div className="w-10 h-10 bg-[#268656] rounded-full mr-3 flex items-center justify-center text-white font-bold">
              <Image src="waichattLogo.png" priority width={45} height={45} alt="logo waichatt"/>
             </div>
-            <span className="text-xl font-bold gradient-text">WaiChatt</span>
+            <span className="text-xl font-bold gradient-text">Waichatt</span>
           </div>
 
           {/* Desktop Navigation */}

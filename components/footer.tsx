@@ -24,7 +24,7 @@ export default function Footer() {
             <div className="w-12 h-12 bg-white rounded-full mr-3 flex items-center justify-center">
               <Image src="waichattLogo.png" width={75} height={75} alt="logo waichatt"/>
             </div>
-            <span className="text-2xl font-bold">WaiChatt</span>
+            <span className="text-2xl font-bold">Waichatt</span>
           </div>
           <div className="flex space-x-6">
             <a href="https://www.facebook.com/share/1HQFRz6wav/?mibextid=wwXIfr" target="_blank" className="hover:text-[#5dae85] transition-colors" aria-label="Facebook">

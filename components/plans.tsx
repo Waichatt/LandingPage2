@@ -148,29 +148,10 @@ export default function Plans() {
     <div className="container mx-auto px-4">
       <h2 className="section-title gradient-text">{t("plans.title")}</h2>
 
-      {/* Contenedor para ambos selectores */}
-      <div className="flex flex-col md:flex-row justify-center items-center gap-4 mb-12">
-        {/* Selector de facturación (Mensual/Anual) */}
-        <div className="inline-flex rounded-md shadow-sm p-1 bg-gray-100">
-          <button
-            onClick={() => setIsAnnual(false)}
-            className={`px-6 py-2 text-sm font-medium rounded-md transition-all ${!isAnnual ? "bg-white text-[#268656] shadow-sm" : "text-gray-600 hover:text-gray-800"
-              }`}
-          >
-            {t("plans.mensual")}
-          </button>
-          <button
-            onClick={() => setIsAnnual(true)}
-            className={`px-6 py-2 text-sm font-medium rounded-md transition-all ${isAnnual ? "bg-white text-[#268656] shadow-sm" : "text-gray-600 hover:text-gray-800"
-              }`}
-          >
-            {t("plans.anual")} {isAnnual && "(15% OFF)"}
-          </button>
-        </div>
-      </div>
+  
 
       {/* Grid de 4 columnas: 3 planes + opcionales */}
-      <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 mt-6">
+      <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 mt-10">
         {/* Los 3 planes */}
         {plans.map((plan, index) => (
           <div

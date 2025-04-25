@@ -145,13 +145,11 @@ export default function Plans() {
   ]
 
   return (
-    <div className="container mx-auto px-4">
-      <h2 className="section-title gradient-text">{t("plans.title")}</h2>
-
-  
-
+    <div className="container mx-auto px-4 ">
+      <h2 className="section-title gradient-text ">{t("plans.title")}</h2>
+      <div style={{ height: '35px' }}></div>
       {/* Grid de 4 columnas: 3 planes + opcionales */}
-      <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 mt-10">
+      <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
         {/* Los 3 planes */}
         {plans.map((plan, index) => (
           <div

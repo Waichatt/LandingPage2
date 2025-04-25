@@ -12,7 +12,7 @@ export default function Contact() {
   const { t } = useLanguage()
   const [formData, setFormData] = useState({
     name: "",
-    email: "",
+    phone: "",
     message: "",
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
@@ -38,7 +38,7 @@ export default function Contact() {
       })
       if (res.status === 200) {
         setSubmitSuccess(true)
-        setFormData({ name: "", email: "", message: "" })
+        setFormData({ name: "", phone: "", message: "" })
       } else {
         setError(true);
       }
@@ -73,14 +73,14 @@ export default function Contact() {
               />
             </div>
             <div className="mb-6">
-              <label htmlFor="email" className="block text-gray-700 mb-2">
-                {t("contact.form.email")}
+              <label htmlFor="phone" className="block text-gray-700 mb-2">
+                {t("contact.form.phone")}
               </label>
               <input
-                type="email"
-                id="email"
-                name="email"
-                value={formData.email}
+                type="number"
+                id="phone"
+                name="phone"
+                value={formData.phone}
                 onChange={handleChange}
                 required
                 className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#268656] focus:border-transparent"

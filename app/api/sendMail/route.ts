@@ -11,9 +11,9 @@ const transporter = nodemailer.createTransport({
 
 export async function POST(req: Request) {
   const body = await req.json()
-  const { name, email, message } = body
+  const { name, phone, message } = body
 
-  if (!name || !email || !message) {
+  if (!name || !phone || !message) {
     return NextResponse.json({ error: 'Faltan datos' }, { status: 400 })
   }
 
@@ -22,7 +22,7 @@ export async function POST(req: Request) {
       <h2 style="color: #333;">📩 Nuevo mensaje desde formulario</h2>
       <hr style="border: none; border-top: 1px solid #ddd;" />
       <p><strong>👤 Nombre:</strong> ${name}</p>
-      <p><strong>📧 Email:</strong> ${email}</p>
+      <p><strong>📧 Telefono:</strong> ${phone}</p>
       <p><strong>📝 Mensaje:</strong></p>
       <p style="background-color: #fff; padding: 15px; border-left: 4px solid #007BFF; color: #444; border-radius: 4px;">${message}</p>
       <hr style="border: none; border-top: 1px solid #ddd;" />

@@ -310,9 +310,9 @@ const translations: Translations = {
     es: "Nombre",
     en: "Name",
   },
-  "contact.form.email": {
-    es: "Email",
-    en: "Email",
+  "contact.form.phone": {
+    es: "Telefono",
+    en: "Phone",
   },
   "contact.form.message": {
     es: "Mensaje",

@@ -53,6 +53,12 @@ export default function Footer() {
             <Link href="#contacto" className="hover:text-[#5dae85] transition-colors">
               {t("nav.contact")}
             </Link>
+            <Link href="/privacidad" className="hover:text-[#5dae85] transition-colors">
+              Politica de privacidad
+            </Link>
+            <Link href="/terminos" className="hover:text-[#5dae85] transition-colors">
+              terminos y condiciones
+            </Link>
           </div>
           <button
             onClick={scrollToTop}

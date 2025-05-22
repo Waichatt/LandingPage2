@@ -27,15 +27,9 @@ export default function PrivacyPolicy() {
             </p>
           </section>
 
-          <section className="mb-10">
-            <h2 className="text-2xl font-semibold mb-4">2. Responsable del tratamiento de datos</h2>
-            <p>
-              El responsable del tratamiento de sus datos personales es WaiChatt, con domicilio social en Coronel zelaya 1102 y correo electrónico de contacto: info@waichatt.com.
-            </p>
-          </section>
 
           <section className="mb-10">
-            <h2 className="text-2xl font-semibold mb-4">3. Datos que recopilamos y finalidad</h2>
+            <h2 className="text-2xl font-semibold mb-4">2. Datos que recopilamos y finalidad</h2>
             <p>Podemos recopilar y procesar los siguientes datos:</p>
             <ul className="list-disc pl-6 mb-4">
               <li>
@@ -76,7 +70,7 @@ export default function PrivacyPolicy() {
           </section>
 
           <section className="mb-10">
-            <h2 className="text-2xl font-semibold mb-4">4. Base legal del tratamiento</h2>
+            <h2 className="text-2xl font-semibold mb-4">3. Base legal del tratamiento</h2>
             <p>Procesamos sus datos personales basándonos en las siguientes bases legales:</p>
             <ul className="list-disc pl-6">
               <li>
@@ -101,7 +95,7 @@ export default function PrivacyPolicy() {
           </section>
 
           <section className="mb-10">
-            <h2 className="text-2xl font-semibold mb-4">5. Conservación de datos</h2>
+            <h2 className="text-2xl font-semibold mb-4">4. Conservación de datos</h2>
             <p>
               Conservaremos sus datos personales solo durante el tiempo necesario para cumplir con los fines para los
               que los recopilamos, incluyendo la satisfacción de cualquier requisito legal, contable o de información.
@@ -120,7 +114,7 @@ export default function PrivacyPolicy() {
           </section>
 
           <section className="mb-10">
-            <h2 className="text-2xl font-semibold mb-4">6. Compartición con terceros</h2>
+            <h2 className="text-2xl font-semibold mb-4">5. Compartición con terceros</h2>
             <p>Podemos compartir sus datos personales con las siguientes categorías de terceros:</p>
             <ul className="list-disc pl-6">
               <li>
@@ -152,7 +146,7 @@ export default function PrivacyPolicy() {
           </section>
 
           <section className="mb-10">
-            <h2 className="text-2xl font-semibold mb-4">7. Derechos del usuario</h2>
+            <h2 className="text-2xl font-semibold mb-4">6. Derechos del usuario</h2>
             <p>
               Bajo ciertas circunstancias, usted tiene los siguientes derechos en relación con sus datos personales:
             </p>
@@ -189,13 +183,13 @@ export default function PrivacyPolicy() {
             </ul>
             <p>
               Si desea ejercer alguno de estos derechos, póngase en contacto con nosotros a través de
-              privacy@waichatt.com. No cobraremos ninguna tarifa por responder a cualquier solicitud para ejercer sus
+              info@waichatt.com No cobraremos ninguna tarifa por responder a cualquier solicitud para ejercer sus
               derechos, y responderemos a todas las solicitudes legítimas dentro de un mes.
             </p>
           </section>
 
           <section className="mb-10">
-            <h2 className="text-2xl font-semibold mb-4">8. Seguridad de la información</h2>
+            <h2 className="text-2xl font-semibold mb-4">7. Seguridad de la información</h2>
             <p>
               Hemos implementado medidas de seguridad apropiadas para evitar que sus datos personales se pierdan,
               utilicen o accedan de forma no autorizada, se modifiquen o divulguen. Además, limitamos el acceso a sus
@@ -211,7 +205,7 @@ export default function PrivacyPolicy() {
           </section>
 
           <section className="mb-10">
-            <h2 className="text-2xl font-semibold mb-4">9. Uso de cookies</h2>
+            <h2 className="text-2xl font-semibold mb-4">8. Uso de cookies</h2>
             <p>
               Nuestra plataforma utiliza cookies y tecnologías similares para distinguirlo de otros usuarios. Esto nos
               ayuda a proporcionarle una buena experiencia cuando navega por nuestra plataforma y también nos permite
@@ -247,14 +241,13 @@ export default function PrivacyPolicy() {
           </section>
 
           <section className="mb-10">
-            <h2 className="text-2xl font-semibold mb-4">10. Contacto y ejercicio de derechos</h2>
+            <h2 className="text-2xl font-semibold mb-4">9. Contacto y ejercicio de derechos</h2>
             <p>
               Si tiene alguna pregunta sobre esta Política de Privacidad o desea ejercer cualquiera de sus derechos,
               puede ponerse en contacto con nosotros a través de:
             </p>
             <ul className="list-disc pl-6">
               <li>Correo electrónico: info@waichatt.com</li>
-              <li>Dirección postal: Coronel zelaya 1102</li>
             </ul>
             <p>
               Si no está satisfecho con nuestra respuesta o cree que estamos procesando sus datos personales de manera
@@ -264,7 +257,7 @@ export default function PrivacyPolicy() {
           </section>
 
           <section className="mb-10">
-            <h2 className="text-2xl font-semibold mb-4">11. Cambios en nuestra política de privacidad</h2>
+            <h2 className="text-2xl font-semibold mb-4">10. Cambios en nuestra política de privacidad</h2>
             <p>
               Cualquier cambio que podamos hacer en nuestra política de privacidad en el futuro se publicará en esta
               página y, cuando corresponda, se le notificará por correo electrónico. Revise regularmente esta página

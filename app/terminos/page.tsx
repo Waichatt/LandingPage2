@@ -13,22 +13,7 @@ export default function TermsAndConditions() {
           <p className="text-gray-600 mb-8">Última actualización: 5 de abril de 2025</p>
 
           <section className="mb-10">
-            <h2 className="text-2xl font-semibold mb-4">1. Identidad de la empresa</h2>
-            <p>
-              Los presentes Términos y Condiciones regulan el uso de la plataforma WaiChatt (en adelante, "la
-              Plataforma", "nosotros", "nuestra" o "nuestro") con domicilio
-              social en Coronel zelaya 1102 y con el número +543816814079
-            </p>
-            <p>Puede contactarnos a través de:</p>
-            <ul className="list-disc pl-6">
-              <li>Correo electrónico: info@waichatt.com</li>
-              <li>Teléfono: +543816814079</li>
-              <li>Dirección postal: Coronel zelaya 1102</li>
-            </ul>
-          </section>
-
-          <section className="mb-10">
-            <h2 className="text-2xl font-semibold mb-4">2. Objeto y aceptación</h2>
+            <h2 className="text-2xl font-semibold mb-4">1. Objeto y aceptación</h2>
             <p>
               Los presentes Términos y Condiciones tienen por objeto regular el acceso y utilización de la Plataforma
               WaiChatt, que ofrece servicios de automatización de atención al cliente mediante WhatsApp Business
@@ -49,7 +34,7 @@ export default function TermsAndConditions() {
           </section>
 
           <section className="mb-10">
-            <h2 className="text-2xl font-semibold mb-4">3. Descripción de los servicios de WaiChatt</h2>
+            <h2 className="text-2xl font-semibold mb-4">2. Descripción de los servicios de WaiChatt</h2>
             <p>WaiChatt ofrece una plataforma de automatización de atención al cliente que permite a las empresas:</p>
             <ul className="list-disc pl-6">
               <li>Integrar agentes de inteligencia artificial en su cuenta de WhatsApp Business.</li>
@@ -66,7 +51,7 @@ export default function TermsAndConditions() {
           </section>
 
           <section className="mb-10">
-            <h2 className="text-2xl font-semibold mb-4">4. Acceso y uso del servicio</h2>
+            <h2 className="text-2xl font-semibold mb-4">3. Acceso y uso del servicio</h2>
             <p>Para acceder y utilizar nuestra Plataforma, usted debe:</p>
             <ul className="list-disc pl-6">
               <li>Ser mayor de edad y tener capacidad legal para contratar.</li>
@@ -97,7 +82,7 @@ export default function TermsAndConditions() {
           </section>
 
           <section className="mb-10">
-            <h2 className="text-2xl font-semibold mb-4">5. Condiciones comerciales</h2>
+            <h2 className="text-2xl font-semibold mb-4">4. Condiciones comerciales</h2>
             <p>
               <strong>5.1. Planes y precios</strong>
             </p>
@@ -135,7 +120,7 @@ export default function TermsAndConditions() {
           </section>
 
           <section className="mb-10">
-            <h2 className="text-2xl font-semibold mb-4">6. Obligaciones del usuario</h2>
+            <h2 className="text-2xl font-semibold mb-4">5. Obligaciones del usuario</h2>
             <p>Al utilizar nuestra Plataforma, el Usuario se compromete a:</p>
             <ul className="list-disc pl-6">
               <li>Proporcionar información veraz, exacta y actualizada.</li>
@@ -163,7 +148,7 @@ export default function TermsAndConditions() {
           </section>
 
           <section className="mb-10">
-            <h2 className="text-2xl font-semibold mb-4">7. Limitación de responsabilidad</h2>
+            <h2 className="text-2xl font-semibold mb-4">6. Limitación de responsabilidad</h2>
             <p>
               WaiChatt se esfuerza por mantener la Plataforma operativa y libre de errores, pero no garantiza que esté
               disponible de forma ininterrumpida o que esté libre de errores. La Plataforma se proporciona "tal cual" y
@@ -186,7 +171,7 @@ export default function TermsAndConditions() {
           </section>
 
           <section className="mb-10">
-            <h2 className="text-2xl font-semibold mb-4">8. Propiedad intelectual</h2>
+            <h2 className="text-2xl font-semibold mb-4">7. Propiedad intelectual</h2>
             <p>
               Todos los derechos de propiedad intelectual sobre la Plataforma, incluyendo pero no limitado a su código
               fuente, diseño, estructura, selección, coordinación, expresión, aspecto y sensación, así como el contenido
@@ -216,7 +201,7 @@ export default function TermsAndConditions() {
           </section>
 
           <section className="mb-10">
-            <h2 className="text-2xl font-semibold mb-4">9. Protección de datos</h2>
+            <h2 className="text-2xl font-semibold mb-4">8. Protección de datos</h2>
             <p>
               WaiChatt se compromete a proteger la privacidad y los datos personales de sus usuarios. El tratamiento de
               datos personales se rige por nuestra Política de Privacidad, que forma parte integrante de estos Términos
@@ -238,13 +223,13 @@ export default function TermsAndConditions() {
           </section>
 
           <section className="mb-10">
-            <h2 className="text-2xl font-semibold mb-4">10. Vías de contacto y soporte</h2>
+            <h2 className="text-2xl font-semibold mb-4">9. Vías de contacto y soporte</h2>
             <p>
               Para cualquier consulta, sugerencia, reclamación o solicitud de soporte técnico, el Usuario puede
               contactar con WaiChatt a través de:
             </p>
             <ul className="list-disc pl-6">
-              <li>Correo electrónico: support@waichatt.com</li>
+              <li>Correo electrónico: info@waichatt.com</li>
               <li>Formulario de contacto en nuestra página web</li>
               <li>Chat en vivo disponible en nuestra Plataforma (en horario de atención)</li>
               <li>Teléfono: +543816814079 (en horario de atención)</li>
@@ -256,7 +241,7 @@ export default function TermsAndConditions() {
           </section>
 
           <section className="mb-10">
-            <h2 className="text-2xl font-semibold mb-4">11. Legislación aplicable y jurisdicción</h2>
+            <h2 className="text-2xl font-semibold mb-4">10. Legislación aplicable y jurisdicción</h2>
             <p>
               Estos Términos y Condiciones se regirán e interpretarán de acuerdo con las leyes de Argentina, sin tener en
               cuenta sus disposiciones sobre conflictos de leyes.
@@ -273,7 +258,7 @@ export default function TermsAndConditions() {
           </section>
 
           <section className="mb-10">
-            <h2 className="text-2xl font-semibold mb-4">12. Disposiciones generales</h2>
+            <h2 className="text-2xl font-semibold mb-4">11. Disposiciones generales</h2>
             <p>
               <strong>12.1. Modificaciones</strong>
             </p>

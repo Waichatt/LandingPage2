@@ -1,36 +1,29 @@
 import Navbar from "@/components/navbar"
 import Hero from "@/components/hero"
-import About from "@/components/about"
-import Benefits from "@/components/benefits"
-import Plans from "@/components/plans"
+import ProblemSolution from "@/components/problem-solution"
+import Features from "@/components/features"
+import Integrations from "@/components/integrations"
+import Pricing from "@/components/pricing"
 import Testimonials from "@/components/testimonials"
+import Education from "@/components/education"
+import FinalCTA from "@/components/final-cta"
 import Contact from "@/components/contact"
 import Footer from "@/components/footer"
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen">
       <Navbar />
-      <section id="inicio" className="pt-16">
-        <Hero />
-      </section>
-      <section id="que-es-waichatt" className="py-20">
-        <About />
-      </section>
-      <section id="beneficios" className="py-20 bg-gradient-to-b from-white to-green-50">
-        <Benefits />
-      </section>
-      <section id="planes" className="py-20">
-        <Plans />
-      </section>
-      <section id="testimonios" className="py-20 bg-gradient-to-b from-green-50 to-white">
-        <Testimonials />
-      </section>
-      <section id="contacto" className="py-20">
-        <Contact />
-      </section>
+      <Hero />
+      <ProblemSolution />
+      <Features />
+      <Integrations />
+      <Pricing />
+      <Testimonials />
+      <Education />
+      <FinalCTA />
+      <Contact />
       <Footer />
     </main>
   )
 }
-

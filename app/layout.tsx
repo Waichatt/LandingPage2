@@ -1,20 +1,32 @@
 import type React from "react"
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
-import { Roboto } from 'next/font/google';
 import { Analytics } from "@vercel/analytics/react"
 import "./globals.css"
-import { ThemeProvider } from "@/components/theme-provider"
-import { LanguageProvider } from "@/components/language-provider"
 
 const inter = Inter({ subsets: ["latin"] })
-const roboto = Roboto({ subsets: ['latin'], weight: ['400', '700'] });
 
 export const metadata: Metadata = {
-  title: "WaiChatt",
-  description: "Revoluciona tu comunicación con agentes de IA integrados con WhatsApp",
-  keywords: "WhatsApp, IA, chatbot, automatización, ventas, atención al cliente, agente IA",
-  generator: 'v0.dev'
+  title: "Waichatt - Automatizá tu negocio con IA conversacional",
+  description: "Transformá tu WhatsApp en una máquina de ventas con CRM, Agentes Inteligentes y Reportes. Atención 24/7, automatización completa y resultados garantizados.",
+  keywords: "WhatsApp Business, IA conversacional, automatización, CRM, chatbot, inteligencia artificial, ventas automáticas, atención al cliente",
+  authors: [{ name: "Waichatt" }],
+  creator: "Waichatt",
+  publisher: "Waichatt",
+  robots: "index, follow",
+  openGraph: {
+    type: "website",
+    locale: "es_AR",
+    url: "https://waichatt.com",
+    title: "Waichatt - Automatizá tu negocio con IA conversacional",
+    description: "Transformá tu WhatsApp en una máquina de ventas con CRM, Agentes Inteligentes y Reportes. Atención 24/7, automatización completa y resultados garantizados.",
+    siteName: "Waichatt",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Waichatt - Automatizá tu negocio con IA conversacional",
+    description: "Transformá tu WhatsApp en una máquina de ventas con CRM, Agentes Inteligentes y Reportes.",
+  },
 }
 
 export default function RootLayout({
@@ -24,16 +36,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es" className="scroll-smooth">
+      <head>
+        <link rel="icon" href="/waichattLogo.png" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#00ffe7" />
+      </head>
       <body className={inter.className}>
-        <ThemeProvider attribute="class" defaultTheme="">
-          <LanguageProvider>{children}</LanguageProvider>
-        </ThemeProvider>
+        {children}
         <Analytics />
       </body>
     </html>
   )
 }
-
-
-
-import './globals.css'

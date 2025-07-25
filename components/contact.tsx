@@ -1,264 +1,181 @@
 "use client"
 
+import type React from "react"
+
+import { useLanguage } from "./language-provider"
+import { Send, Facebook, Instagram, Linkedin, Check, X } from "lucide-react"
 import { useState } from "react"
-import { Send, Phone, Mail, MapPin, Clock } from "lucide-react"
+import Image from "next/image"
+
 
 export default function Contact() {
+  const { t } = useLanguage()
   const [formData, setFormData] = useState({
     name: "",
-    email: "",
     phone: "",
-    company: "",
     message: "",
-    service: "demo"
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitSuccess, setSubmitSuccess] = useState(false)
+  const [error, setError] = useState(false)
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target
-    setFormData(prev => ({ ...prev, [name]: value }))
+    setFormData((prev) => ({ ...prev, [name]: value }))
   }
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
+    setError(false);
     setIsSubmitting(true)
-    
     try {
-      const response = await fetch("/api/sendMail", {
+      const res = await fetch("/api/sendMail", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData)
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
       })
-      
-      if (response.ok) {
+      if (res.status === 200) {
         setSubmitSuccess(true)
-        setFormData({
-          name: "",
-          email: "",
-          phone: "",
-          company: "",
-          message: "",
-          service: "demo"
-        })
+        setFormData({ name: "", phone: "", message: "" })
+      } else {
+        setError(true);
       }
     } catch (error) {
-      console.error("Error:", error)
-    } finally {
+      setError(true);
+      console.error("Error sending message:", error);
+    }
+    finally {
       setIsSubmitting(false)
     }
+
   }
 
   return (
-    <section id="contacto" className="section-padding bg-gradient-to-b from-gray-900 to-gray-800">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16 animate-fade-in-up">
-          <div className="inline-flex items-center space-x-2 bg-cyan-500/10 border border-cyan-500/30 rounded-full px-6 py-3 mb-6">
-            <Send className="w-5 h-5 text-cyan-400" />
-            <span className="text-cyan-400 font-semibold">Contacto</span>
-          </div>
-          
-          <h2 className="text-4xl lg:text-6xl font-black mb-6">
-            Hablemos de tu<br />
-            <span className="gradient-text">transformación digital</span>
-          </h2>
-          
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Estamos listos para ayudarte a automatizar tu negocio. 
-            Elegí la forma que prefieras para comenzar.
-          </p>
-        </div>
-
-        <div className="grid lg:grid-cols-2 gap-12">
-          {/* Contact Form */}
-          <div className="animate-fade-in-up">
-            <div className="bg-gray-900/50 backdrop-blur-xl rounded-3xl p-8 border border-gray-700">
-              <h3 className="text-2xl font-bold mb-6 gradient-text">Agenda tu consulta gratuita</h3>
-              
-              {submitSuccess ? (
-                <div className="text-center py-8">
-                  <div className="w-16 h-16 bg-green-500/20 border border-green-500/30 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Send className="w-8 h-8 text-green-400" />
-                  </div>
-                  <h4 className="text-xl font-bold text-green-400 mb-2">¡Mensaje enviado!</h4>
-                  <p className="text-gray-300">Te contactaremos en las próximas 24 horas para coordinar tu demo.</p>
-                </div>
-              ) : (
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid md:grid-cols-2 gap-4">
-                    <div>
-                      <label className="block text-gray-300 mb-2 font-medium">Nombre *</label>
-                      <input
-                        type="text"
-                        name="name"
-                        value={formData.name}
-                        onChange={handleChange}
-                        required
-                        className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-xl text-white focus:border-cyan-400 focus:outline-none transition-colors"
-                        placeholder="Tu nombre completo"
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-gray-300 mb-2 font-medium">Email *</label>
-                      <input
-                        type="email"
-                        name="email"
-                        value={formData.email}
-                        onChange={handleChange}
-                        required
-                        className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-xl text-white focus:border-cyan-400 focus:outline-none transition-colors"
-                        placeholder="tu@email.com"
-                      />
-                    </div>
-                  </div>
-
-                  <div className="grid md:grid-cols-2 gap-4">
-                    <div>
-                      <label className="block text-gray-300 mb-2 font-medium">Teléfono *</label>
-                      <input
-                        type="tel"
-                        name="phone"
-                        value={formData.phone}
-                        onChange={handleChange}
-                        required
-                        className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-xl text-white focus:border-cyan-400 focus:outline-none transition-colors"
-                        placeholder="+54 9 11 1234-5678"
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-gray-300 mb-2 font-medium">Empresa</label>
-                      <input
-                        type="text"
-                        name="company"
-                        value={formData.company}
-                        onChange={handleChange}
-                        className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-xl text-white focus:border-cyan-400 focus:outline-none transition-colors"
-                        placeholder="Nombre de tu empresa"
-                      />
-                    </div>
-                  </div>
-
-                  <div>
-                    <label className="block text-gray-300 mb-2 font-medium">¿Qué te interesa?</label>
-                    <select
-                      name="service"
-                      value={formData.service}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-xl text-white focus:border-cyan-400 focus:outline-none transition-colors"
-                    >
-                      <option value="demo">Ver demo del producto</option>
-                      <option value="audit">Auditoría gratuita de WhatsApp</option>
-                      <option value="pricing">Información sobre precios</option>
-                      <option value="integration">Consulta sobre integraciones</option>
-                      <option value="custom">Desarrollo personalizado</option>
-                    </select>
-                  </div>
-
-                  <div>
-                    <label className="block text-gray-300 mb-2 font-medium">Mensaje</label>
-                    <textarea
-                      name="message"
-                      value={formData.message}
-                      onChange={handleChange}
-                      rows={4}
-                      className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-xl text-white focus:border-cyan-400 focus:outline-none transition-colors resize-none"
-                      placeholder="Contanos sobre tu negocio y cómo podemos ayudarte..."
-                    />
-                  </div>
-
-                  <button
-                    type="submit"
-                    disabled={isSubmitting}
-                    className="btn-primary w-full flex items-center justify-center space-x-2 text-lg py-4"
-                  >
-                    {isSubmitting ? (
-                      <span>Enviando...</span>
-                    ) : (
-                      <>
-                        <Send className="w-5 h-5" />
-                        <span>Enviar mensaje</span>
-                      </>
-                    )}
-                  </button>
-                </form>
-              )}
+    <div className="container mx-auto px-4">
+      <h2 className="section-title gradient-text">{t("contact.title")}</h2>
+      <div className="grid md:grid-cols-2 gap-12 mt-12">
+        <div>
+          <form onSubmit={handleSubmit} method="POST" className="card">
+            <div className="mb-6">
+              <label htmlFor="name" className="block text-gray-700 mb-2">
+                {t("contact.form.name")}
+              </label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+                required
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#268656] focus:border-transparent"
+              />
             </div>
-          </div>
-
-          {/* Contact Info */}
-          <div className="animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
-            <div className="space-y-8">
-              {/* Direct Contact */}
-              <div className="bg-gray-900/50 backdrop-blur-xl rounded-3xl p-8 border border-gray-700">
-                <h3 className="text-2xl font-bold mb-6 gradient-text">Contacto directo</h3>
-                
-                <div className="space-y-6">
-                  <div className="flex items-center space-x-4">
-                    <div className="w-12 h-12 bg-cyan-500/20 border border-cyan-500/30 rounded-xl flex items-center justify-center">
-                      <Phone className="w-6 h-6 text-cyan-400" />
-                    </div>
-                    <div>
-                      <p className="text-gray-300 font-medium">Teléfono</p>
-                      <a href="tel:+5493816814079" className="text-cyan-400 hover:text-cyan-300 transition-colors">
-                        +54 9 381 681-4079
-                      </a>
-                    </div>
-                  </div>
-
-                  <div className="flex items-center space-x-4">
-                    <div className="w-12 h-12 bg-purple-500/20 border border-purple-500/30 rounded-xl flex items-center justify-center">
-                      <Mail className="w-6 h-6 text-purple-400" />
-                    </div>
-                    <div>
-                      <p className="text-gray-300 font-medium">Email</p>
-                      <a href="mailto:info@waichatt.com" className="text-purple-400 hover:text-purple-300 transition-colors">
-                        info@waichatt.com
-                      </a>
-                    </div>
-                  </div>
-
-                  <div className="flex items-center space-x-4">
-                    <div className="w-12 h-12 bg-green-500/20 border border-green-500/30 rounded-xl flex items-center justify-center">
-                      <MapPin className="w-6 h-6 text-green-400" />
-                    </div>
-                    <div>
-                      <p className="text-gray-300 font-medium">Ubicación</p>
-                      <p className="text-green-400">Tucumán, Argentina</p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-center space-x-4">
-                    <div className="w-12 h-12 bg-yellow-500/20 border border-yellow-500/30 rounded-xl flex items-center justify-center">
-                      <Clock className="w-6 h-6 text-yellow-400" />
-                    </div>
-                    <div>
-                      <p className="text-gray-300 font-medium">Horarios</p>
-                      <p className="text-yellow-400">Lun - Vie: 9:00 - 18:00 hs</p>
-                    </div>
-                  </div>
-                </div>
+            <div className="mb-6">
+              <label htmlFor="phone" className="block text-gray-700 mb-2">
+                {t("contact.form.phone")}
+              </label>
+              <input
+                type="number"
+                id="phone"
+                name="phone"
+                value={formData.phone}
+                onChange={handleChange}
+                required
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#268656] focus:border-transparent"
+              />
+            </div>
+            <div className="mb-6">
+              <label htmlFor="message" className="block text-gray-700 mb-2">
+                {t("contact.form.message")}
+              </label>
+              <textarea
+                id="message"
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
+                required
+                rows={5}
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#268656] focus:border-transparent"
+              ></textarea>
+            </div>
+            <button
+              type="submit"
+              disabled={isSubmitting}
+              className="btn-primary flex items-center justify-center w-full"
+            >
+              {isSubmitting ? (
+                <span className="animate-pulse">Enviando...</span>
+              ) : (
+                <>
+                  {t("contact.form.submit")}
+                  <Send className="ml-2" size={18} />
+                </>
+              )}
+            </button>
+            {submitSuccess && (
+              <div className="mt-4 p-3 bg-green-100 text-green-800 rounded-[10px] flex gap-2 justify-start items-center">
+                <Check className="h-8 w-8 rounded-full p-1  bg-green-500" /> Mensaje enviado con éxito. Nos pondremos en contacto pronto.
               </div>
+            )}
+            {error && (
+              <div className="mt-4 p-3 bg-red-100 text-red-800 rounded-[10px] flex gap-2 justify-start items-center">
+                <X className="h-8 w-8 rounded-full p-1  bg-red-500" /> Hubo un error al enviar el mensaje. ¡Intentelo Nuevamente!
+              </div>
+            )}
+          </form>
+        </div>
+        <div>
+          <div className="card h-full flex flex-col justify-between">
+            <div>
+              <h3 className="text-xl font-bold mb-6 gradient-text">{t("contact.whatsapp")}</h3>
+              <a href="https://wa.me/+5493816814079" target="_blank" rel="noopener noreferrer">
+                <button className="bg-[#25D366] text-white py-3 px-8 rounded-[10px] flex items-center mb-8 gap-3 hover:bg-opacity-90 transition-all">
+                  <Image src="whatsapp.svg" width={20} height={20} alt="logo whatsapp" />
+                  WhatsApp
+                </button>
+              </a>
 
-              {/* WhatsApp CTA */}
-              <div className="bg-gradient-to-r from-green-500/10 to-green-600/10 border border-green-500/30 rounded-3xl p-8">
-                <h3 className="text-2xl font-bold mb-4 text-green-400">¿Preferís WhatsApp?</h3>
-                <p className="text-gray-300 mb-6">
-                  Hablá directamente con nuestro equipo por WhatsApp y obtené respuestas inmediatas.
-                </p>
+              <h3 className="text-xl font-bold mb-4 gradient-text">{t("contact.social")}</h3>
+              <div className="flex space-x-4 mb-8">
                 <a
-                  href="https://wa.me/5493816814079?text=Hola! Me interesa conocer más sobre Waichatt"
+                  href="https://www.facebook.com/share/1HQFRz6wav/?mibextid=wwXIfr"
+                  className="w-12 h-12 bg-[#1877F2] text-white rounded-full flex items-center justify-center hover:opacity-90 transition-all"
+                  aria-label="Facebook"
                   target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn-secondary w-full flex items-center justify-center space-x-2"
                 >
-                  <span className="text-2xl">📱</span>
-                  <span>Escribinos por WhatsApp</span>
+                  <Facebook size={24} />
                 </a>
+                <a
+                  href="https://www.instagram.com/waichatt?igsh=bzY0ZHFlb29mY2Uz&utm_source=qr"
+                  className="w-12 h-12 bg-[#E4405F] text-white rounded-full flex items-center justify-center hover:opacity-90 transition-all"
+                  aria-label="Instagram"
+                  target="_blank"
+                >
+                  <Instagram size={24} />
+                </a>
+                <a
+
+                  href="https://www.linkedin.com/company/waichatt/about"
+                  className="w-12 h-12 bg-[#0A66C2] text-white rounded-full flex items-center justify-center hover:opacity-90 transition-all"
+                  aria-label="LinkedIn"
+                  target="_blank"
+                >
+                  <Linkedin size={24} />
+                </a>
+              </div>
+            </div>
+
+            <div className="mt-8">
+              <div className="bg-gray-100 p-4 rounded-lg">
+                <p className="text-gray-600 text-sm">Horario de atención: Lunes a Viernes de 9:00 a 18:00 hs.</p>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
   )
 }
+
